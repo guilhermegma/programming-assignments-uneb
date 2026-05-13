@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Material
+comment1.params=descricao\ valor
+comment1.target=Material(java.lang.String,\ double)
+comment2.params=
+comment2.target=double\ getValor()
+comment3.params=valor
+comment3.target=void\ setValor(double)
+comment4.params=
+comment4.target=java.lang.String\ getDescricao()
+comment5.params=descricao
+comment5.target=void\ setDescricao(java.lang.String)
+numComments=6

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Empresa
+comment1.params=cnpj\ nome\ telefone
+comment1.target=Empresa(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=novoUsuario
+comment2.target=void\ cadastrarUsuario(Usuario)
+comment3.params=
+comment3.target=java.lang.String\ getNome()
+comment4.params=user\ appSugerido
+comment4.target=void\ avaliarGastoMensal(Usuario,\ App)
+comment5.params=novoApp
+comment5.target=void\ adicionarAppAoCatalogo(App)
+comment6.params=
+comment6.target=java.lang.String\ appMaisUsado()
+numComments=7

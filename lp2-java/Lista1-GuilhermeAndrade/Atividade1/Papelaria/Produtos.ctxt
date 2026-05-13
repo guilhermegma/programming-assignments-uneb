@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Produtos
+comment1.params=codBarras\ nome\ valorCusto\ estoque
+comment1.target=Produtos(java.lang.String,\ java.lang.String,\ double,\ int)
+comment2.params=porcentagemLucro
+comment2.target=double\ venda(double)
+comment3.params=adicionar
+comment3.target=int\ adicionarEstoque(int)
+comment4.params=remover
+comment4.target=int\ removerEstoque(int)
+numComments=5

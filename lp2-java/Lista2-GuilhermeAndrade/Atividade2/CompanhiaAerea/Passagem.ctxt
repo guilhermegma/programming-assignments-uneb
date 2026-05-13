@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Passagem
+comment1.params=identificador\ origem\ destino\ dataHoraPartida\ tipoPassagem\ precoBase
+comment1.target=Passagem(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ double)
+comment2.params=identificador\ origem\ destino\ dataHoraPartida\ tipoPassagem\ precoBase\ cpfPassageiro
+comment2.target=Passagem(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ java.lang.String)
+comment3.params=numeroAssento
+comment3.target=void\ escolherAssento(int)
+comment4.params=
+comment4.target=void\ cancelarPassagem()
+comment5.params=
+comment5.target=double\ calcularPassagem()
+comment6.params=percentual
+comment6.target=double\ calcularPassagem(double)
+numComments=7

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Projeto
+comment1.params=titulo\ objetivo\ duracao\ valorBolsa\ profResponsavel
+comment1.target=Projeto(java.lang.String,\ java.lang.String,\ double,\ double,\ Professor)
+comment10.params=
+comment10.target=double\ calcularCusto()
+comment11.params=
+comment11.target=void\ imprimeDados()
+comment2.params=
+comment2.target=java.lang.String\ getTitulo()
+comment3.params=titulo
+comment3.target=void\ setTitulo(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getObjetivo()
+comment5.params=objetivo
+comment5.target=void\ setObjetivo(java.lang.String)
+comment6.params=
+comment6.target=double\ getDuracao()
+comment7.params=duracao
+comment7.target=void\ setDuracao(double)
+comment8.params=
+comment8.target=double\ getValorBolsa()
+comment9.params=valorBolsa
+comment9.target=void\ setValorBolsa(double)
+numComments=12

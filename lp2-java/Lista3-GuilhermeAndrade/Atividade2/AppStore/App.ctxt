@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=App
+comment1.params=nome\ objetivo\ tamanhoMb\ valorMensal\ desenvolvedora
+comment1.target=App(java.lang.String,\ java.lang.String,\ int,\ double,\ Empresa)
+comment2.params=
+comment2.target=java.lang.String\ getObjetivo()
+comment3.params=
+comment3.target=double\ getValorMensal()
+comment4.params=segundoApp
+comment4.target=boolean\ substituir(App)
+comment5.params=
+comment5.target=void\ imprimirDados()
+numComments=6

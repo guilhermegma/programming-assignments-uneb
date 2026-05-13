@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Encomenda
+comment1.params=codigo\ remetente\ destinatario\ endereco\ cep\ nacional\ peso
+comment1.target=Encomenda(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ boolean,\ double)
+comment2.params=codigo\ remetente\ destinatario\ endereco\ cep\ peso
+comment2.target=Encomenda(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ double)
+comment3.params=
+comment3.target=double\ postarEncomenda()
+numComments=4

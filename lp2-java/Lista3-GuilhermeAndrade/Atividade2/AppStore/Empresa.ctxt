@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Empresa
+comment1.params=cnpj\ nome\ telefone
+comment1.target=Empresa(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+numComments=3

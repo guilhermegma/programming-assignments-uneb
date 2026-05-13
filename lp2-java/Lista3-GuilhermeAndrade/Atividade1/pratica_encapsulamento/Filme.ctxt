@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Filme
+comment1.params=nome\ anoLancamento
+comment1.target=Filme(java.lang.String,\ int)
+comment2.params=
+comment2.target=boolean\ getDisponibilidade()
+comment3.params=
+comment3.target=void\ locarFilme()
+comment4.params=
+comment4.target=void\ devolverFilme()
+numComments=5
