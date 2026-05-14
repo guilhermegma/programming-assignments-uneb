@@ -44,13 +44,46 @@ void Fila::inserir(char n) {
     fim = novo;
 }
 
-void Pilha :: empilhar(char n) {
-    Nodo *novo = new Nodo;
-    if (novo == nullptr) exit(1);
+class Pilha {
+private:
+    Nodo *topo;
 
-    novo->info = n;
+public:
+    Pilha();
+    void empilhar(char n);
+    void desempilhar();
+    void imprimir();
+
+};
+
+Pilha::Pilha() {
+    topo = nullptr;
+}
+
+void Pilha::empilhar(char letra) {
+    Nodo *novo = new Nodo;
+
+    if (novo == nullptr) exit(1);
+    
+    novo->info = letra;
     novo->prox = topo;
     topo = novo;
+}
+
+char Pilha::desempilhar() {
+    if (topo == nullptr) exit(1);
+
+    char caractereDesempilhado;
+    Nodo *aux = topo;
+
+    caractereDesempilhado = aux->info;
+
+    topo = topo->prox;
+
+    delete aux;
+
+    return caractereDesempilhado;
+
 }
 
 int main() {
