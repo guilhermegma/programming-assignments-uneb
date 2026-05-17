@@ -4,42 +4,80 @@
 
 using namespace std;
 
-class Nodo {
+class Node {
 public:
-    char info;
-    Nodo *prox;
+    int info;
+    Node *prox;
 };
 
-class Fila {
-    Nodo *inicio;
-    Nodo *fim;
+class queue {
+    Node *front;
+    Node *back;
 
 public:
-    Fila() {
-        inicio = nullptr;
-        fim = nullptr;
+    queue() {
+        front = nullptr;
+        back = nullptr;
     }
 
-    void inserir(char n);
-    int retirar();
-    void imprimir();
+    void insert(int number);
+    int remove();
+    void print();
 };
 
-void Fila::inserir(char n) {
-    Nodo *novo = new Nodo;
+void queue::insert(int number) {
+    Node *newNode = new Node;
 
-    if (novo == nullptr) {
+    if (newNode == nullptr) {
+        cout << "No memory" << endl;
         exit(1);
     }
 
-    novo->info = n;
-    novo->prox = nullptr;
+    newNode->info = number;
+    newNode->prox = nullptr;
 
-    if (inicio == nullptr) {
-        inicio = novo;
+    if (front == nullptr) {
+        front = newNode;
+        back = newNode;
     } else {
-        fim->prox = novo;
+        back->prox = newNode;
+        back = newNode;
+    }
+}
+
+int queue::remove() {
+    if (front == nullptr) {
+        cout << "Empty queue" << endl;
+        exit(1);
     }
 
-    fim = novo;
+    Node *aux = front;
+    int removedNumber = aux->info;
+
+    front = front->prox;
+
+    if (front == nullptr) {
+        back = front;
+    }
+
+    delete aux;
+    return removedNumber;
+}
+
+void queue::print() {
+    if (front == nullptr) {
+        cout << "Empty queue" << endl;
+        exit(1);
+    }
+
+    Node *aux = front;
+
+    cout << "Queue: ";
+
+    while (aux != nullptr) {
+        cout << " [" << aux->info << "]";
+        aux = aux->prox;
+    }
+
+    cout << endl;
 }

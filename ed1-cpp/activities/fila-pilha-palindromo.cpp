@@ -4,29 +4,29 @@
 
 using namespace std;
 
-class Nodo {
+class Node {
 public:
     char info;
-    Nodo *prox;
+    Node *prox;
 };
 
-class Fila {
-    Nodo *inicio;
-    Nodo *fim;
+class queue {
+    Node *front;
+    Node *back;
 
 public:
-    Fila() {
-        inicio = nullptr;
-        fim = nullptr;
+    queue() {
+        front = nullptr;
+        back = nullptr;
     }
 
-    void inserir(char n);
-    int retirar();
-    void imprimir();
+    void insert(char n);
+    int remove();
+    void print();
 };
 
-void Fila::inserir(char n) {
-    Nodo *novo = new Nodo;
+void queue::insert(char n) {
+    Node *novo = new Node;
 
     if (novo == nullptr) {
         exit(1);
@@ -35,18 +35,18 @@ void Fila::inserir(char n) {
     novo->info = n;
     novo->prox = nullptr;
 
-    if (inicio == nullptr) {
-        inicio = novo;
+    if (front == nullptr) {
+        front = novo;
     } else {
-        fim->prox = novo;
+        back->prox = novo;
     }
 
-    fim = novo;
+    back = novo;
 }
 
 class Pilha {
 private:
-    Nodo *topo;
+    Node *topo;
 
 public:
     Pilha();
@@ -61,7 +61,7 @@ Pilha::Pilha() {
 }
 
 void Pilha::empilhar(char letra) {
-    Nodo *novo = new Nodo;
+    Node *novo = new Node;
 
     if (novo == nullptr) exit(1);
     
@@ -74,7 +74,7 @@ char Pilha::desempilhar() {
     if (topo == nullptr) exit(1);
 
     char caractereDesempilhado;
-    Nodo *aux = topo;
+    Node *aux = topo;
 
     caractereDesempilhado = aux->info;
 
@@ -88,7 +88,7 @@ char Pilha::desempilhar() {
 
 int main() {
 	Pilha p;
-	Fila f;
+	queue f;
 	string palavra;
 	char c;
     bool ehPalindromo = true;
@@ -99,14 +99,14 @@ int main() {
 
 	while (c != '\0') {
 		c = palavra [i];
-		f.inserir (c);
+		f.insert (c);
 		p.empilhar (c);
 		i++;
 	}
 
     while(p.topo != nullptr){
         char aux = p.desempilhar;
-        char aux2 = f.retirar;
+        char aux2 = f.remove;
 
         if (aux != aux2) {
             ehPalindromo = false;
