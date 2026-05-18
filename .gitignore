@@ -1,36 +1,7 @@
-### --- Java --- ###
-*.class
-*.jar
-*.war
-*.ear
-# Pastas de IDEs (VS Code / IntelliJ / Eclipse)
-.settings/
-.bin/
-.metadata/
-.classpath
-.project
-
-### --- Python --- ###
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-ENV/
-.env
-
-### --- C & C++ --- ###
-*.o
-*.obj
+ed1-cpp/activities/output/
 *.out
-*.exe
-# Binários gerados pelo compilador
-build/
-bin/
+*.o
 
-### --- SO & Ferramentas --- ###
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
+# Java (Linguagem de Programacao II)
+**/bin/
+**/*.class
