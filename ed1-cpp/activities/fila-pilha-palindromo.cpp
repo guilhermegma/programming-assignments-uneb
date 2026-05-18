@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cstdlib>
+#include <string>
 
 using namespace std;
 
 class Node {
 public:
-    int info;
+    char info;
     Node *prox;
 };
 
@@ -19,12 +20,12 @@ public:
         back = nullptr;
     }
 
-    void insert(int number);
-    int remove();
+    void insert(char character);
+    char remove();
     void print();
 };
 
-void Queue::insert(int number) {
+void Queue::insert(char character) {
     Node *newNode = new Node;
 
     if (newNode == nullptr) {
@@ -32,7 +33,7 @@ void Queue::insert(int number) {
         exit(1);
     }
 
-    newNode->info = number;
+    newNode->info = character;
     newNode->prox = nullptr;
 
     if (front == nullptr) {
@@ -44,14 +45,14 @@ void Queue::insert(int number) {
     }
 }
 
-int Queue::remove() {
+char Queue::remove() {
     if (front == nullptr) {
         cout << "Empty queue" << endl;
         exit(1);
     }
 
     Node *aux = front;
-    int removedNumber = aux->info;
+    char removedCharacter = aux->info;
 
     front = front->prox;
 
@@ -60,7 +61,7 @@ int Queue::remove() {
     }
 
     delete aux;
-    return removedNumber;
+    return removedCharacter;
 }
 
 void Queue::print() {
@@ -86,16 +87,16 @@ class Stack {
 public:
     Node *top;
 
-    Stack::Stack() {
+    Stack() {
         top = nullptr;
     }
 
-    void push(int number);
-    int pop();
+    void push(char character);
+    char pop();
     void printStack();
 };
 
-void Stack::push(int number) {
+void Stack::push(char character) {
     Node *newNode = new Node;
 
     if (newNode == nullptr) {
@@ -103,7 +104,7 @@ void Stack::push(int number) {
         exit(1);
     }
 
-    newNode->info = number;
+    newNode->info = character;
 
     // 1. O novo nó aponta para onde o topo atual está apontando (o antigo topo)
     newNode->prox = top;
@@ -112,14 +113,14 @@ void Stack::push(int number) {
     top = newNode;
 }
 
-int Stack::pop() {
+char Stack::pop() {
     if  (top == nullptr) {
         cout<<"Empty stack"<< endl;
         exit(1);
     }
 
     Node *aux = top;
-    int popped;
+    char popped;
 
     popped = aux->info;
     top = aux->prox;
@@ -147,34 +148,43 @@ void Stack::printStack () {
 }
 
 int main() {
+    int i = 0;
+    int auxi = 0;
 	Stack p;
 	Queue f;
-	string palavra;
-	char c;
-    bool ehPalindromo = true;
+	string word;
+	char c = 'x';
+    bool isPalindrome = true;
 
-    cout << "Informe uma palavra, verificaremos se é um palindromo: " << endl;
-	cin >> palavra;
-	int i = 0;
+    cout << "Type a word and we'll verify if it's a palindrome: " << endl;
+	cin >> word;
 
 	while (c != '\0') {
-		c = palavra [i];
-		f.insert (c);
-		p.push (c);
-		i++;
+		c = word [i];
+        if (c != '\0') {
+            f.insert (c);
+		    p.push (c);
+		    i++;
+        }
 	}
 
     while(p.top != nullptr){
-        char aux = p.pop;
-        char aux2 = f.remove;
+        char aux = p.pop();
+        char aux2 = f.remove();
 
         if (aux != aux2) {
-            ehPalindromo = false;
+            cout << "The word isnt a palindrome.";
+            isPalindrome = false;
             break;
         }
+        auxi++;
     }
 
-    return ehPalindromo;
+    if (auxi == i) {
+        cout << "The word is a palindrome.";
+    }
+
+    return isPalindrome;
 }
 
 //for each 
