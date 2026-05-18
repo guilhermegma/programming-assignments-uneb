@@ -186,7 +186,3 @@ int main() {
 
     return isPalindrome;
 }
-
-//for each 
-//fazer função desempilhar e retirar
-//chamar ela retornando o char
