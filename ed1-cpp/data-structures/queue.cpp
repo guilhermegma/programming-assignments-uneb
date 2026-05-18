@@ -9,12 +9,12 @@ public:
     Node *prox;
 };
 
-class queue {
+class Queue {
     Node *front;
     Node *back;
 
 public:
-    queue() {
+    Queue() {
         front = nullptr;
         back = nullptr;
     }
@@ -24,7 +24,7 @@ public:
     void print();
 };
 
-void queue::insert(int number) {
+void Queue::insert(int number) {
     Node *newNode = new Node;
 
     if (newNode == nullptr) {
@@ -44,7 +44,7 @@ void queue::insert(int number) {
     }
 }
 
-int queue::remove() {
+int Queue::remove() {
     if (front == nullptr) {
         cout << "Empty queue" << endl;
         exit(1);
@@ -63,7 +63,7 @@ int queue::remove() {
     return removedNumber;
 }
 
-void queue::print() {
+void Queue::print() {
     if (front == nullptr) {
         cout << "Empty queue" << endl;
         exit(1);

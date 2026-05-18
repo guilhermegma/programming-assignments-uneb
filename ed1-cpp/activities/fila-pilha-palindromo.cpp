@@ -1,94 +1,154 @@
 #include <iostream>
-#include <ctime> 
 #include <cstdlib>
 
 using namespace std;
 
 class Node {
 public:
-    char info;
+    int info;
     Node *prox;
 };
 
-class queue {
+class Queue {
     Node *front;
     Node *back;
 
 public:
-    queue() {
+    Queue() {
         front = nullptr;
         back = nullptr;
     }
 
-    void insert(char n);
+    void insert(int number);
     int remove();
     void print();
 };
 
-void queue::insert(char n) {
-    Node *novo = new Node;
+void Queue::insert(int number) {
+    Node *newNode = new Node;
 
-    if (novo == nullptr) {
+    if (newNode == nullptr) {
+        cout << "No memory" << endl;
         exit(1);
     }
 
-    novo->info = n;
-    novo->prox = nullptr;
+    newNode->info = number;
+    newNode->prox = nullptr;
 
     if (front == nullptr) {
-        front = novo;
+        front = newNode;
+        back = newNode;
     } else {
-        back->prox = novo;
+        back->prox = newNode;
+        back = newNode;
+    }
+}
+
+int Queue::remove() {
+    if (front == nullptr) {
+        cout << "Empty queue" << endl;
+        exit(1);
     }
 
-    back = novo;
-}
+    Node *aux = front;
+    int removedNumber = aux->info;
 
-class Pilha {
-private:
-    Node *topo;
+    front = front->prox;
 
-public:
-    Pilha();
-    void empilhar(char n);
-    void desempilhar();
-    void imprimir();
-
-};
-
-Pilha::Pilha() {
-    topo = nullptr;
-}
-
-void Pilha::empilhar(char letra) {
-    Node *novo = new Node;
-
-    if (novo == nullptr) exit(1);
-    
-    novo->info = letra;
-    novo->prox = topo;
-    topo = novo;
-}
-
-char Pilha::desempilhar() {
-    if (topo == nullptr) exit(1);
-
-    char caractereDesempilhado;
-    Node *aux = topo;
-
-    caractereDesempilhado = aux->info;
-
-    topo = topo->prox;
+    if (front == nullptr) {
+        back = front;
+    }
 
     delete aux;
+    return removedNumber;
+}
 
-    return caractereDesempilhado;
+void Queue::print() {
+    if (front == nullptr) {
+        cout << "Empty queue" << endl;
+        exit(1);
+    }
 
+    Node *aux = front;
+
+    cout << "Queue: ";
+
+    while (aux != nullptr) {
+        cout << " [" << aux->info << "]";
+        aux = aux->prox;
+    }
+
+    cout << endl;
+}
+
+class Stack {
+
+public:
+    Node *top;
+
+    Stack::Stack() {
+        top = nullptr;
+    }
+
+    void push(int number);
+    int pop();
+    void printStack();
+};
+
+void Stack::push(int number) {
+    Node *newNode = new Node;
+
+    if (newNode == nullptr) {
+        cout << "No memory" << endl;
+        exit(1);
+    }
+
+    newNode->info = number;
+
+    // 1. O novo nó aponta para onde o topo atual está apontando (o antigo topo)
+    newNode->prox = top;
+
+    // 2. O topo da lista agora passa a ser o seu novo nó
+    top = newNode;
+}
+
+int Stack::pop() {
+    if  (top == nullptr) {
+        cout<<"Empty stack"<< endl;
+        exit(1);
+    }
+
+    Node *aux = top;
+    int popped;
+
+    popped = aux->info;
+    top = aux->prox;
+    delete aux;
+
+    return popped;
+}
+
+void Stack::printStack () {
+    if  (top == nullptr) {
+        cout<<"Empty stack"<< endl;
+        exit(1);
+    }
+
+    Node *aux = top;
+
+    cout<<"Stack:";
+
+    while (aux!= nullptr) {
+        cout<<" ["<<aux->info<<"]";
+        aux = aux->prox;
+    }
+
+    cout<<" <-End of stack"<< endl;
 }
 
 int main() {
-	Pilha p;
-	queue f;
+	Stack p;
+	Queue f;
 	string palavra;
 	char c;
     bool ehPalindromo = true;
@@ -100,12 +160,12 @@ int main() {
 	while (c != '\0') {
 		c = palavra [i];
 		f.insert (c);
-		p.empilhar (c);
+		p.push (c);
 		i++;
 	}
 
-    while(p.topo != nullptr){
-        char aux = p.desempilhar;
+    while(p.top != nullptr){
+        char aux = p.pop;
         char aux2 = f.remove;
 
         if (aux != aux2) {
