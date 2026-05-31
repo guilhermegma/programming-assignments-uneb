@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CartaoOuro
+comment1.params=codigoPrincipal\ codigoSeguranca\ dataExpedicao\ dataValidade
+comment1.target=CartaoOuro(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date)
+comment2.params=valor
+comment2.target=double\ calcularPontosPorValor(double)
+numComments=3

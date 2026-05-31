@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Compra
+comment1.params=nomeEstabelecimento\ dataCompra\ cartao\ valorTotal\ quantidadeParcelas
+comment1.target=Compra(java.lang.String,\ java.util.Date,\ Cartao,\ double,\ int)
+comment10.params=valorTotal
+comment10.target=void\ setValorTotal(double)
+comment11.params=
+comment11.target=int\ getQuantidadeParcelas()
+comment12.params=quantidadeParcelas
+comment12.target=void\ setQuantidadeParcelas(int)
+comment2.params=
+comment2.target=double\ calcularPontosGanhos()
+comment3.params=
+comment3.target=java.lang.String\ getNomeEstabelecimento()
+comment4.params=nomeEstabelecimento
+comment4.target=void\ setNomeEstabelecimento(java.lang.String)
+comment5.params=
+comment5.target=java.util.Date\ getDataCompra()
+comment6.params=dataCompra
+comment6.target=void\ setDataCompra(java.util.Date)
+comment7.params=
+comment7.target=Cartao\ getCartao()
+comment8.params=cartao
+comment8.target=void\ setCartao(Cartao)
+comment9.params=
+comment9.target=double\ getValorTotal()
+numComments=13

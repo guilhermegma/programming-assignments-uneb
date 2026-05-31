@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Administradora
+comment1.params=bandeira
+comment1.target=Administradora(java.lang.String)
+comment2.params=
+comment2.target=Cliente\ obterClienteComMaisPontos()
+comment3.params=
+comment3.target=java.lang.String\ getBandeira()
+comment4.params=bandeira
+comment4.target=void\ setBandeira(java.lang.String)
+comment5.params=
+comment5.target=java.util.List\ getClientes()
+comment6.params=cliente
+comment6.target=void\ adicionarCliente(Cliente)
+numComments=7

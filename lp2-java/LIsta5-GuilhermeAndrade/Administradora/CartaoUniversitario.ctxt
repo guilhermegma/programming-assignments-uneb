@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CartaoUniversitario
+comment1.params=codigoPrincipal\ codigoSeguranca\ dataExpedicao\ dataValidade\ instituicaoEnsino
+comment1.target=CartaoUniversitario(java.lang.String,\ java.lang.String,\ java.util.Date,\ java.util.Date,\ java.lang.String)
+comment2.params=valor
+comment2.target=double\ calcularPontosPorValor(double)
+comment3.params=
+comment3.target=java.lang.String\ getInstituicaoEnsino()
+comment4.params=instituicaoEnsino
+comment4.target=void\ setInstituicaoEnsino(java.lang.String)
+numComments=5
