@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ArtigoCongresso
+comment1.params=titulo\ resumo\ textoCompleto\ qtdPaginas\ areaInteresse
+comment1.target=ArtigoCongresso(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=double\ calcularTaxa()
+comment3.params=
+comment3.target=java.lang.String\ getAreaInteresse()
+comment4.params=areaInteresse
+comment4.target=void\ setAreaInteresse(java.lang.String)
+numComments=5

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ArtigoLongo
+comment1.params=titulo\ resumo\ textoCompleto\ qtdPaginas
+comment1.target=ArtigoLongo(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getTextoCompleto()
+comment3.params=textoCompleto
+comment3.target=void\ setTextoCompleto(java.lang.String)
+comment4.params=
+comment4.target=int\ getQtdPaginas()
+comment5.params=qtdPaginas
+comment5.target=void\ setQtdPaginas(int)
+numComments=6

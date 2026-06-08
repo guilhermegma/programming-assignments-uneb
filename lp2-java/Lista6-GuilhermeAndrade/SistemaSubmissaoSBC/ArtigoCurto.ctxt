@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ArtigoCurto
+comment1.params=titulo\ resumo\ instituicao
+comment1.target=ArtigoCurto(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=double\ calcularTaxa()
+comment3.params=
+comment3.target=java.lang.String\ getInstituicao()
+comment4.params=instituicao
+comment4.target=void\ setInstituicao(java.lang.String)
+numComments=5
